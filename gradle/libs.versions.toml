@@ -1,13 +1,25 @@
 [versions]
-agp = "8.5.2"
-kotlin = "1.9.0"
+agp = "8.7.2"
+kotlin = "2.0.20"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.10.01"
+daggerhilt = "2.51.1"
+kaptVersion = "1.6.20"
+androidxhilt = "1.2.0"
+
+roomVersion = "2.6.1"
+
+coilVersion = "2.4.0"
+
+retrofitVersion = "2.11.0"
+gsonVersion = "2.11.0"
+okhttpVersion = "5.0.0-alpha.10"
+loggingVersion = "5.0.0-alpha.10"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,7 +37,29 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+dagger-hilt = {group = "com.google.dagger", name = "hilt-android", version.ref = "daggerhilt"}
+hilt-compiler = {group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerhilt"}
+androidx-hilt-compiler = {group = "androidx.hilt", name = "hilt-compiler", version.ref = "androidxhilt"}
+hilt-navigation-compose = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxhilt"}
+
+
+retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion"}
+gsonConverter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gsonVersion"}
+okhttp3= {group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttpVersion"}
+logging-interceptor= {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingVersion"}
+
+room-ktx = {group = "androidx.room", name = "room-ktx", version.ref = "roomVersion"}
+room-paging = {group = "androidx.room", name = "room-paging", version.ref = "roomVersion"}
+room-compiler = {group = "androidx.room", name = "room-compiler", version.ref = "roomVersion"}
+
+coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion"}
+
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger-hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "daggerhilt" }
+kapt-plugin = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion"}
+compose_compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin"}
 
